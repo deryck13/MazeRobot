@@ -7,7 +7,7 @@ Released into the public domain.
 #ifndef HUBeeBMDWheel_H
 #define HUBeeBMDWheel_H
 #include "Arduino.h"
-//#define Debug
+#define Debug
 
 class HUBeeBMDWheel
 {

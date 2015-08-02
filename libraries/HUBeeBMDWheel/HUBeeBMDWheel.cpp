@@ -171,44 +171,14 @@ int HUBeeBMDWheel::getQPins()
 }
 
 void HUBeeBMDWheel::HUBW_readQ()
-{
-	if (steps <= 0) //nu am facut nici un pas. nu doresc valori negative	
-	{
-		if (digitalRead(Q1PinA))
-		{
-			if (!digitalRead(Q1PinB))
-			{
-				steps++;
-			}
-		}
+{		
+	if (digitalRead(Q1PinA))
+		if (digitalRead(Q1PinB))
+			steps--;
 		else
-			if (digitalRead(Q1PinB))
-			{
-				steps++;
-			}
-	}
-
-	if (steps > 0) //am facut deja un pas
-	{
-		if (digitalRead(Q1PinA))
-		{
-			if (digitalRead(Q1PinB))
-			{
-				steps--;
-			}
-			else
-			{
-				steps++;
-			}
-		}
-		else
-			if (digitalRead(Q1PinB))
-			{
-				steps++;
-			}
-			else
-			{
-				steps--;
-			}
-	}
+			steps++;
+	else if (digitalRead(Q1PinB))
+		steps++;
+	else
+		steps--;
 };
