@@ -26,15 +26,13 @@ HUBeeBMDWheel HUBWheel1(HUBW1_IN1,HUBW1_IN2,HUBW1_PWM);    // .setupPins(INT1,IN
 HUBeeBMDWheel HUBWheel2(HUBW2_IN1,HUBW2_IN2,HUBW2_PWM);   // .setupPins(INT1,INT2,PWM);
 // end
 
-
-
 void setup() {
-
+	#ifdef Debug
 	Serial.begin(115200);
 	Serial.println("Starting connection. Please wait...");
 	delay(100);
 	Serial.println("Data from the MCU:");
-
+	#endif
 	//-----zona de initializare pini
 	//start
 	pinMode(HUBW1_Q1APin, INPUT_PULLUP);
