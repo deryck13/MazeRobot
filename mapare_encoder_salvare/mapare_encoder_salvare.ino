@@ -18,9 +18,6 @@ int HUBW1_PWM = 9;
 int HUBW2_IN1 = 12;
 int HUBW2_IN2 = 13;
 int HUBW2_PWM = 10;
-
-boolean equal = true;
-int directions = 0;
 // end
 
 //-----initializare obiecte
