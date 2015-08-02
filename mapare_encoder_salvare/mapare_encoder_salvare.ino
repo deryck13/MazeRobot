@@ -1,4 +1,3 @@
-// mapare_encoder_salvare.ino
 #include <HUBeeBMDWheel.h>
 
 //-----zona de variabile globale
