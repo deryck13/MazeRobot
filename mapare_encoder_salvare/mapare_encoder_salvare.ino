@@ -1,5 +1,5 @@
 #include <HUBeeBMDWheel.h>
-
+#include <PID_v1.h>
 //-----zona de variabile globale
 //start
 int HUBW1_Q1APin = 2; // atasat intreruperii int.0
@@ -31,7 +31,7 @@ void setup() {
 	delay(100);
 	Serial.println("Data from the MCU:");
 	#endif
-	
+
 	//-----zona de initializare pini
 	//start
 	pinMode(HUBW1_Q1APin, INPUT_PULLUP);
@@ -50,7 +50,7 @@ void setup() {
 	//end
 };
 
-void loop() {
+void loop(){
 };
 
 //-----small hack to accept objects in attachInterrupt function
